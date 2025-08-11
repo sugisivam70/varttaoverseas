@@ -21,6 +21,99 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   <link rel="stylesheet" href="style.css">
+  <style>
+    .about-section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  align-items: center;
+}
+
+.about-left .tag {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.about-left h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-stats h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.about-stats p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: gray;
+}
+
+.about-middle img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.card.beige {
+  background-color: #f7ece0;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: gray;
+}
+
+.image-card {
+  background: url("chair.jpg") no-repeat center/cover;
+  color: rgb(169, 169, 169);
+  position: relative;
+  height: 200px;
+}
+
+.image-card .arrow {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgb(208, 208, 208);
+  color: black;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 14px;
+}
+  </style>
 </head>
 <body>
 
@@ -34,8 +127,9 @@
         </div>
 
         <nav class="nav-links">
-          <a href="#">ABOUT US</a>
-          <a href="#">PRODUCTS</a>
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="Prduct.html">PRODUCTS</a>
            <a href="#">COLLECTIONS</a>
         </nav>
 

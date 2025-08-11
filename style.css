@@ -15,22 +15,45 @@ p {
   line-height: 1.6;
 }
 
-/* Hero Section Styling */
-.hero-section {
-  font-family: "lato", sans-serif;
-  text-align: center;
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
-.sale-banner {
-  background: #d35959;
-  color: #fff;
-  padding: 12px 0;
-  font-size: 100px;
+.nav-links li {
+  margin: 0 15px;
 }
 
-.sale-banner span {
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: rgb(228, 4, 4);
+}
+
+/* Icons */
+.nav-icons a {
+  margin-left: 15px;
+  color: black;
+  text-decoration: none;
   font-weight: bold;
 }
+
+.nav-icons i {
+  margin-right: 5px;
+  color: rgb(192, 0, 0);
+}
+
+/* Hero Section Styling */
 
 .navbar {
   display: flex;
@@ -70,97 +93,96 @@ p {
   color: #555;
 }
 
-.about-section {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
-  gap: 20px;
-  padding: 40px;
+.hero-section {
+  font-family: "lato", sans-serif;
+  text-align: center;
+}
+
+
+.hero {
+  display: flex;
   align-items: center;
-}
-
-.about-left .tag {
-  display: inline-block;
-  padding: 5px 15px;
-  border: 1px solid #000;
-  border-radius: 20px;
-  font-size: 12px;
-  margin-bottom: 10px;
-  text-align: left;
-  align-items: flex-start;
-}
-
-.about-left h1 {
-  font-size: 48px;
-  line-height: 1.1;
-  margin-bottom: 30px;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.about-stats {
-  display: flex;
+  justify-content: space-between;
+  padding: 50px;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
-.about-stats h2 {
-  font-size: 28px;
-  margin: 0;
+.hero-left {
+  flex: 1;
 }
 
-.about-stats p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  color: gray;
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
-.about-middle img {
-  width: 100%;
-  border-radius: 15px;
+.hero-left h1 span {
+  color: #ff6600;
 }
 
-.about-right {
+.hero-left p {
+  margin: 20px 0;
+  font-size: 1rem;
+  max-width: 450px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+}
+
+.hero-news {
+  flex-basis: 250px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.news-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.news-item {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.card {
-  border-radius: 15px;
-  padding: 20px;
+.news-item img {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.card.beige {
-  background-color: #f7ece0;
+.news-text h4 {
+  font-size: 0.9rem;
 }
 
-.card h3 {
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.card p {
-  font-size: 14px;
+.news-text p {
+  font-size: 0.8rem;
   color: gray;
 }
 
-.image-card {
-  background: url("chair.jpg") no-repeat center/cover;
-  color: rgb(169, 169, 169);
-  position: relative;
-  height: 200px;
-}
 
-.image-card .arrow {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  background-color: rgb(208, 208, 208);
-  color: black;
-  border-radius: 50%;
-  padding: 8px;
-  font-size: 14px;
-}
+
 
 .collection-title {
   margin-top: 60px;
@@ -172,7 +194,7 @@ p {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-
+text-align: center;
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -221,39 +243,16 @@ p {
 }
 
 /* Nav Links */
-.nav-links {
-  list-style: none;
+
+
+
+
+
+
+
+.sector{
   display: flex;
-  margin: 0;
-  padding: 0;
-  font-family: "lato", sans-serif;
-}
-
-.nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: red;
-}
-
-/* Icons */
-.nav-icons a {
-  margin-left: 15px;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-icons i {
-  margin-right: 5px;
-  color: orange;
+  flex: 1fr ;
 }
 
 .product-grid {
@@ -427,7 +426,6 @@ p {
 
 .product-section {
   font-family: "Lato", sans-serif;
-
   padding: 30px;
   background: #fff;
   max-width: 1200px;
