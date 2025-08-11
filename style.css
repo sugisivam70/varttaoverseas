@@ -15,10 +15,9 @@ p {
   line-height: 1.6;
 }
 
-
 /* Hero Section Styling */
 .hero-section {
-  font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
   text-align: center;
 }
 
@@ -34,143 +33,134 @@ p {
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background-color: #f7f6f3;
-      font-family: 'lato', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #f7f6f3;
+  font-family: "lato", sans-serif;
 }
 
 .logo img {
-    height: 50px; /* Adjust logo height */
+  height: 50px; /* Adjust logo height */
 }
 
 .nav-links {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .nav-icons {
-    display: flex;
-    gap: 20px;
-    font-size: 16px;
-    color: #000;
-    cursor: pointer;
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
 }
 
 .nav-icons i:hover {
-    color: #555;
+  color: #555;
 }
 
-
-
-
-
 .about-section {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    gap: 20px;
-    padding: 40px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  align-items: center;
 }
 
 .about-left .tag {
-    display: inline-block;
-    padding: 5px 15px;
-    border: 1px solid #000;
-    border-radius: 20px;
-    font-size: 12px;
-    margin-bottom: 10px;
-    text-align: left;
-    align-items: flex-start;
-
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  align-items: flex-start;
 }
 
 .about-left h1 {
-    font-size: 48px;
-    line-height: 1.1;
-    margin-bottom: 30px;
-    align-items: 
-    flex-start;
-    text-align: left;
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .about-stats {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .about-stats h2 {
-    font-size: 28px;
-    margin: 0;
+  font-size: 28px;
+  margin: 0;
 }
 
 .about-stats p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: gray;
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: gray;
 }
 
 .about-middle img {
-    width: 100%;
-    border-radius: 15px;
+  width: 100%;
+  border-radius: 15px;
 }
 
 .about-right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .card {
-    border-radius: 15px;
-    padding: 20px;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .card.beige {
-    background-color: #f7ece0;
+  background-color: #f7ece0;
 }
 
 .card h3 {
-    font-size: 20px;
-    margin: 10px 0;
+  font-size: 20px;
+  margin: 10px 0;
 }
 
 .card p {
-    font-size: 14px;
-    color: gray;
+  font-size: 14px;
+  color: gray;
 }
 
 .image-card {
-    background: url('chair.jpg') no-repeat center/cover;
-    color: rgb(169, 169, 169);
-    position: relative;
-    height: 200px;
+  background: url("chair.jpg") no-repeat center/cover;
+  color: rgb(169, 169, 169);
+  position: relative;
+  height: 200px;
 }
 
 .image-card .arrow {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background-color: rgb(208, 208, 208);
-    color: black;
-    border-radius: 50%;
-    padding: 8px;
-    font-size: 14px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgb(208, 208, 208);
+  color: black;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 14px;
 }
-
-
-
 
 .collection-title {
   margin-top: 60px;
@@ -218,8 +208,6 @@ p {
   color: #fff;
 }
 
-
-
 /* Main Navbar */
 .main-nav {
   border-radius: 20px;
@@ -229,10 +217,8 @@ p {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid red;
-   font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
 }
-
-
 
 /* Nav Links */
 .nav-links {
@@ -240,7 +226,7 @@ p {
   display: flex;
   margin: 0;
   padding: 0;
-   font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
 }
 
 .nav-links li {
@@ -316,8 +302,6 @@ p {
   margin: 0 15px 20px;
 }
 
-
-
 .container {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -368,10 +352,9 @@ p {
   top: 15px;
   font-size: 20px;
   cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   padding: 10px;
-  
 }
 
 .gap {
