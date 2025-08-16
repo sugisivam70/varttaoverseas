@@ -9,3 +9,15 @@ document.querySelectorAll('.carousel-btn').forEach(btn => {
         }
     });
 });
+
+const track = document.querySelector('.carousel-track');
+const leftBtn = document.querySelector('.nav-btn.left');
+const rightBtn = document.querySelector('.nav-btn.right');
+
+leftBtn.addEventListener('click', () => {
+  track.scrollBy({ left: -320, behavior: 'smooth' });
+});
+
+rightBtn.addEventListener('click', () => {
+  track.scrollBy({ left: 320, behavior: 'smooth' });
+});
