@@ -23,3 +23,9 @@ leftBtn.addEventListener("click", () => {
 rightBtn.addEventListener("click", () => {
   track.scrollBy({ left: 320, behavior: "smooth" });
 });
+
+
+
+
+
+

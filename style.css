@@ -128,7 +128,7 @@ nav ul li {
 }
 
 .hero-content h1 {
-  color: #000000;
+  color: #571b00;
   font-size: 4.5rem;
   line-height: 1.4;
   margin-bottom: 20px;
@@ -176,6 +176,8 @@ nav ul li {
   transition: background 0.3s, color 0.3s;
   border: none;
 }
+
+
 .scroll-down-btn {
   display: inline-block;
   width: 50px;
@@ -217,6 +219,7 @@ nav ul li {
     justify-content: space-between;
   }
 }
+
 
 .navbar {
   display: flex;
