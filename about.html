@@ -242,7 +242,8 @@
     </style>
   </head>
   <body>
-    <header class="navbar">
+     <header class="navbar">
+      
       <div class="logo">
         <img
           src="logo/WhatsApp_Image_2025-08-09_at_10.49.21_9c3fd1ae-removebg-preview.png"
@@ -250,13 +251,17 @@
         />
       </div>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="Prduct.html">Products</a></li>
-        </ul>
-      </nav>
+<button class="nav-toggle" aria-label="Toggle navigation" type="button">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </button>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="Prduct.html">Products</a></li>
+    </ul>
+  </nav>
 
       <!-- Enquire / Message Icon -->
       <div class="icons">
@@ -390,6 +395,7 @@
       </div>
     </section>
 
+
     <footer class="footer">
       <div class="footer-container">
         <!-- Left Column -->
@@ -466,5 +472,32 @@
         <p>© Copyright 2025. Dee Kitchen. All rights reserved.</p>
       </div>
     </footer>
+
+
+    <script>
+  // Mobile Navbar Toggle
+  document.querySelector('.nav-toggle').addEventListener('click', function () {
+    document.querySelector('.navbar').classList.toggle('open');
+    document.body.style.overflow = document.querySelector('.navbar').classList.contains('open') ? 'hidden' : '';
+  });
+
+  // Close nav when clicking outside
+  document.addEventListener('click', function (e) {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar.classList.contains('open')) return;
+    if (!navbar.contains(e.target) && !e.target.classList.contains('nav-toggle')) {
+      navbar.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Close nav on ESC
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelector('.navbar').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
   </body>
 </html>
