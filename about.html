@@ -15,6 +15,16 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
+      body {
+        background-image: url("hero/Picsart_25-08-21_17-55-03-399.jpg");
+        background-size:contain;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-position: center;
+
+        font-family: 'poppins', sans-serif;
+       
+      }
       .hero {
         position: relative;
         background: #fff8f0;
@@ -24,20 +34,27 @@
         justify-content: center;
         font-family: "Poppins", sans-serif;
       }
-
-      .hero .overlay {
+      .hero .herobg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
+        overflow: hidden;
       }
-      .overlay img {
+
+      .hero .herobg img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 1;
+        opacity: 0.3;
+      }
+
+      .hero-content {
+        max-width: 1280px;
+        position: relative;
+        z-index: 1;
+        text-align: center;
       }
       .hero-content {
         position: relative;
@@ -45,12 +62,20 @@
         color: #fff;
       }
 
+      .hero h1 {
+        position: relative;
+        z-index: 10;
+      }
+      .hero p {
+        position: relative;
+      }
       .hero-content h1 span {
         color: #ff6600;
       }
 
       /* About Section */
       .about {
+     
         display: flex;
         gap: 40px;
         padding: 60px 10%;
@@ -58,10 +83,19 @@
         flex-wrap: wrap;
       }
 
+      .abt-contend {
+        max-width:1200px;
+        margin: auto;
+        padding: 40px 20px;
+        background: rgba(250, 236, 223, 0.8);
+        border-radius: 12px;
+      }
       .about-image img {
         border-radius: 10px;
         width: 100%;
         max-width: 500px;
+        
+        
       }
 
       .section-label {
@@ -93,7 +127,7 @@
       }
 
       .success-story {
-        background: #fff8f0;
+       
         text-align: center;
         padding: 20px 20px;
         border-radius: 12px;
@@ -101,6 +135,13 @@
         margin-bottom: 40px;
       }
 
+      .success-content {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 20px;
+        background: rgba(250, 236, 223, 0.8);
+        border-radius: 12px;
+      }
       .success-header .section-label {
         color: #eb7425;
         font-weight: 600;
@@ -152,8 +193,15 @@
       .services {
         text-align: center;
         padding: 60px 10%;
-        background: #f9f9f9;
+        
       }
+      .service-contend {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 20px;
+        background: rgba(250, 236, 223, 0.8);
+        border-radius: 12px;
+      } 
 
       .service-cards {
         display: flex;
@@ -185,23 +233,49 @@
         flex-direction: column;
         gap: 40px;
         padding: 60px 10%;
-        background: #ffefe6;
+     
         color: rgb(80, 79, 79);
         flex-wrap: wrap;
         align-items: center;
       }
-
+      .mission-text {
+        max-width: 600px;
+      } 
+      .mission-text p {
+        color: #3d3d3d;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .mission-text h2 {
+        color: #7b3f00;
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+      .mission-content {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 20px;
+        background: rgba(250, 236, 223, 0.8);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
       .mission-image img {
         display: flex;
         flex-direction: row;
         border-radius: 10px;
         width: 100%;
         max-width: 500px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        filter: opacity(0.8);
+       
       }
 
       .btn-secondary {
-        background: white;
-        color: #094d42;
+        background: rgb(252, 122, 36);
+        color: #474747;
         padding: 10px 20px;
         border: none;
         cursor: pointer;
@@ -242,8 +316,7 @@
     </style>
   </head>
   <body>
-     <header class="navbar">
-      
+    <header class="navbar">
       <div class="logo">
         <img
           src="logo/WhatsApp_Image_2025-08-09_at_10.49.21_9c3fd1ae-removebg-preview.png"
@@ -251,17 +324,17 @@
         />
       </div>
 
-<button class="nav-toggle" aria-label="Toggle navigation" type="button">
-    <i class="fa fa-bars" aria-hidden="true"></i>
-  </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" type="button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="Prduct.html">Products</a></li>
-    </ul>
-  </nav>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Prduct.html">Products</a></li>
+        </ul>
+      </nav>
 
       <!-- Enquire / Message Icon -->
       <div class="icons">
@@ -290,6 +363,9 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
+        <div class="herobg">
+          <img src="hero/4178.jpg" alt="Dee Kitchen Logo" />
+        </div>
         <h1>Meet our <span>Story</span></h1>
         <p>Home / About Us</p>
       </div>
@@ -297,23 +373,26 @@
 
     <!-- About Us -->
     <section class="about">
-      <div class="about-text">
-        <p class="section-label">About Us</p>
-        <h2>Trusted Care, Exceptional Kitchen Solutions</h2>
-        <p>
-          At Dee Kitchen & Varratta Overseas, we specialize in delivering
-          world-class kitchen designs, premium appliances, and exceptional
-          service for homes and businesses. With years of expertise in modern
-          kitchen solutions and export excellence, our mission is to enhance
-          every cooking experience with style and functionality.
-        </p>
-        <button class="btn-primary">Read Details</button>
+      <div class="abt-contend">
+        <div class="about-text">
+          <p class="section-label">About Us</p>
+          <h2>Trusted Care, Exceptional Kitchen Solutions</h2>
+          <p>
+            At Dee Kitchen & Varratta Overseas, we specialize in delivering
+            world-class kitchen designs, premium appliances, and exceptional
+            service for homes and businesses. With years of expertise in modern
+            kitchen solutions and export excellence, our mission is to enhance
+            every cooking experience with style and functionality.
+          </p>
+          <button class="btn-primary">Read Details</button>
+        </div>
       </div>
     </section>
 
     <!-- Services -->
     <section class="services">
-      <p class="section-label">Why Choose Us</p>
+      <div class="service-contend">
+        <p class="section-label">Why Choose Us</p>
       <h2>Our Services</h2>
       <div class="service-cards">
         <div class="service-card">
@@ -340,34 +419,39 @@
           </p>
         </div>
       </div>
+
+      </div>
+      
     </section>
 
     <section class="success-story">
-      <div class="success-header">
-        <p class="section-label">Our Success Story</p>
-        <h2>Our Proven Success Stories</h2>
-        <p class="section-subtext">
-          At Dee Kitchen and Varatta Overseas, our journey is built on trust,
-          quality, and innovation.
-        </p>
-      </div>
+      <div class="success-content">
+        <div class="success-header">
+          <p class="section-label">Our Success Story</p>
+          <h2>Our Proven Success Stories</h2>
+          <p class="section-subtext">
+            At Dee Kitchen and Varatta Overseas, our journey is built on trust,
+            quality, and innovation.
+          </p>
+        </div>
 
-      <div class="success-stats">
-        <div class="stat-item">
-          <h3>30k</h3>
-          <p>Employees</p>
-        </div>
-        <div class="stat-item">
-          <h3>500k</h3>
-          <p>Projects Completed</p>
-        </div>
-        <div class="stat-item">
-          <h3>20+</h3>
-          <p>Years of Experience</p>
-        </div>
-        <div class="stat-item">
-          <h3>98%</h3>
-          <p>Positive Reviews</p>
+        <div class="success-stats">
+          <div class="stat-item">
+            <h3>20k</h3>
+            <p>Products sale's</p>
+          </div>
+          <div class="stat-item">
+            <h3>5k</h3>
+            <p>Customer Statisfy</p>
+          </div>
+          <div class="stat-item">
+            <h3>20+</h3>
+            <p>Years of Experience</p>
+          </div>
+          <div class="stat-item">
+            <h3>98%</h3>
+            <p>Positive Reviews</p>
+          </div>
         </div>
       </div>
     </section>
@@ -388,13 +472,12 @@
         </div>
         <div class="mission-image">
           <img
-            src="logo/360_F_572035221_EI00SR8vWYzN077WBFm3PGHC1T3tYSSF.jpg"
+            src="abtimg/4040.jpg"
             alt="Modern Kitchen"
           />
         </div>
       </div>
     </section>
-
 
     <footer class="footer">
       <div class="footer-container">
@@ -473,31 +556,39 @@
       </div>
     </footer>
 
-
     <script>
-  // Mobile Navbar Toggle
-  document.querySelector('.nav-toggle').addEventListener('click', function () {
-    document.querySelector('.navbar').classList.toggle('open');
-    document.body.style.overflow = document.querySelector('.navbar').classList.contains('open') ? 'hidden' : '';
-  });
+      // Mobile Navbar Toggle
+      document
+        .querySelector(".nav-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".navbar").classList.toggle("open");
+          document.body.style.overflow = document
+            .querySelector(".navbar")
+            .classList.contains("open")
+            ? "hidden"
+            : "";
+        });
 
-  // Close nav when clicking outside
-  document.addEventListener('click', function (e) {
-    const navbar = document.querySelector('.navbar');
-    if (!navbar.classList.contains('open')) return;
-    if (!navbar.contains(e.target) && !e.target.classList.contains('nav-toggle')) {
-      navbar.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
+      // Close nav when clicking outside
+      document.addEventListener("click", function (e) {
+        const navbar = document.querySelector(".navbar");
+        if (!navbar.classList.contains("open")) return;
+        if (
+          !navbar.contains(e.target) &&
+          !e.target.classList.contains("nav-toggle")
+        ) {
+          navbar.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+      });
 
-  // Close nav on ESC
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      document.querySelector('.navbar').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
-</script>
+      // Close nav on ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          document.querySelector(".navbar").classList.remove("open");
+          document.body.style.overflow = "";
+        }
+      });
+    </script>
   </body>
 </html>

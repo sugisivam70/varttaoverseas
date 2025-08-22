@@ -27,14 +27,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <style>
-  
     .navbar {
       font-family: "Poppins", sans-serif;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 30px;
-  
+
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -112,7 +111,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 15px 20px; /* reduced padding to save space */
-   
+
       width: 100%;
       top: 0;
       left: 0;
@@ -179,17 +178,16 @@
         display: none; /* hide text to save space */
       }
     }
-    
-
 
     .product2-card {
       position: relative;
       background: #fff8f0;
       color: #4a4a4a;
       border-radius: 15px;
-      height: 310px;
+      height: 425px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
+      font-family: "Poppins", sans-serif;
     }
 
     .product2-card:hover {
@@ -293,6 +291,9 @@
 
     .collection-grid {
       padding-top: 0;
+      background: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
 
     .product-images {
@@ -300,7 +301,10 @@
       flex-direction: column;
       gap: 12px;
     }
-
+    .shop-collection {
+      padding-top: 0px;
+      background: #f9f9f9;
+    }
     .thumbnail {
       width: 80px;
       height: 80px;
@@ -449,8 +453,8 @@
       min-width: 220px;
       max-width: 260px;
       margin-right: 32px;
-      margin-bottom: 24px;
       float: left;
+      font-family: "Poppins", sans-serif;
     }
 
     .sidebar-title {
@@ -493,11 +497,94 @@
 
     /* ...existing code... */
 
+    /* Ensure sidebar and collection grid are above the footer and do not overlap */
+    .shop-collection {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 48px; /* Add space above footer */
+    }
+
+    .footer {
+      position: relative;
+      z-index: 2;
+      margin-top: 0;
+      clear: both;
+    }
+
+    /* Responsive: add more space on mobile if needed */
+    @media (max-width: 900px) {
+      .shop-collection {
+        margin-bottom: 64px;
+      }
+    }
+    /* ...existing code... */
+
+/* Make sidebar fixed on desktop */
+@media (min-width: 901px) {
+  .side-bar {
+    position: fixed;
+    top: 100px; /* adjust as needed for your navbar height */
+    left: 40px; /* adjust for your layout */
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 20;
+  }
+  .popcorn-machine-section {
+    margin-left: 300px; /* adjust to match sidebar width + left offset */
+  }
+}
+
+
+/* ...existing code... */
+
+/* Make sure sidebar does not block footer or shop-collection */
+@media (min-width: 901px) {
+  .side-bar {
+    position: fixed;
+    top: 100px;
+    left: 40px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 20;
+  }
+  .popcorn-machine-section,
+  .shop-collection {
+    margin-left: 300px; /* match sidebar width + left offset */
+  }
+  .footer {
+    margin-left: 0; /* footer stays full width */
+    clear: both;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+/* On mobile, sidebar is not fixed and does not affect layout */
+@media (max-width: 900px) {
+  .side-bar,
+  .popcorn-machine-section,
+  .shop-collection {
+    margin-left: 0;
+    position: static;
+    max-width: 100%;
+  }
+  .footer {
+    margin-left: 0;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+/* ...existing code... */
+/* ...existing code... */
+
+    /* ...existing code... */
+    /* ...existing code... */
+
     /* ...existing code... */
   </style>
   <body>
- <header class="navbar">
-      
+    <header class="navbar">
       <div class="logo">
         <img
           src="logo/WhatsApp_Image_2025-08-09_at_10.49.21_9c3fd1ae-removebg-preview.png"
@@ -505,17 +592,17 @@
         />
       </div>
 
-<button class="nav-toggle" aria-label="Toggle navigation" type="button">
-    <i class="fa fa-bars" aria-hidden="true"></i>
-  </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" type="button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="Prduct.html">Products</a></li>
-    </ul>
-  </nav>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Prduct.html">Products</a></li>
+        </ul>
+      </nav>
 
       <!-- Enquire / Message Icon -->
       <div class="icons">
@@ -544,217 +631,266 @@
     <section class="shop-collection">
       <!-- ...existing code... -->
       <section class="popcorn-machine-section">
-        <h2 class="grid-title" id="gridTitle">Cooking Equipements</h2>
+        <h2 class="grid-title" id="gridTitle">Ice creame Machine's</h2>
 
         <div class="side-bar">
           <h3 class="sidebar-title">Our Collection</h3>
           <ul class="sidebar-list">
             <li>
-              <a href="#" data-category="cooking" class="active"
-                >Cooking Equipements</a
+              <a href="#" data-category="icecream" class="active"
+                >Ice Cream Machines</a
               >
             </li>
-            <li><a href="#" data-category="bakery">Baking Equipment</a></li>
-            <li><a href="#" data-category="cold">Cold Equipment</a></li>
-            <li><a href="#" data-category="buffet">Buffet & Tableware</a></li>
+            <li><a href="#" data-category="juicer">Juicer Machines</a></li>
             <li>
-              <a href="#" data-category="beverage">Bevarage Accesories</a>
+              <a href="#" data-category="juicedispensers">Juice Dispensers</a>
             </li>
-            <li><a href="#" data-category="bar">Bar Accesories</a></li>
-            <li><a href="#" data-category="housekeeping">House Keeping</a></li>
-            <li><a href="#" data-category="kitchen">Kitchen Acccessorie</a></li>
-            <li><a href="#" data-category="baking">Baking Accescsories</a></li>
-            <li><a href="#" data-category="spares">Spares</a></li>
+            <li><a href="#" data-category="popcorn">Popcorn Machines</a></li>
+            <li><a href="#" data-category="deepfryers">Deep Fryers</a></li>
+            <li><a href="#" data-category="pizzaovens">Pizza Ovens</a></li>
+            <li><a href="#" data-category="waffle">Waffle Machines</a></li>
+            <li><a href="#" data-category="foodwarmer">Food Warmers</a></li>
+            <li>
+              <a href="#" data-category="teacoffee">Tea & Coffee Machines</a>
+            </li>
+            <li>
+              <a href="#" data-category="bakerymachines">Bakery Machines</a>
+            </li>
+            <li>
+              <a href="#" data-category="bakeryequipments">Bakery Equipment</a>
+            </li>
+            <li>
+              <a href="#" data-category="foodprocessing"
+                >Commercial Food Processing Machines</a
+              >
+            </li>
+            <li>
+              <a href="#" data-category="fastfood"
+                >Fast Food Kitchen Equipment</a
+              >
+            </li>
+            <li>
+              <a href="#" data-category="hotelsupplies">Hotel Supplies</a>
+            </li>
+            <li><a href="#" data-category="accessories">Accessories</a></li>
+            <li>
+              <a href="#" data-category="machinespares">Machine Spares</a>
+            </li>
+            <li><a href="#" data-category="miscellaneous">Miscellaneous</a></li>
           </ul>
         </div>
       </section>
 
+      <!-- cooking -->
 
-<!-- cooking -->
-
-      <div
+      <section
         class="collection-grid"
-        data-category="cooking"
+        data-category="icecream"
         style="display: grid"
       >
-        <a href="Cooking-eqp.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Popcornmachines/20250530_154516.jpg"
-            alt="Microwaves"
-          />
-          <div class="collection-info">
-            <h3>Popcorn Machines</h3>
-            <p>Collection →</p>
+        <div class="product2-card">
+          <img src="Product-img/Bakingequip/bakingdeckoven/Bakero Electric Baking Oven 1 Deck 2 Tray (1).jpg" alt="Product Image" />
+
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">Ice Creame Machine</div>
+            <div class="product2-title">Volt:120w,capacity:30L,300Cone/hour</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-        <a href="Cooking-eqp.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Cotton Candy machine</h3>
-            <p>Collection →</p>
+        </div>
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
+
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">Ice Creame Machine</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-        <a href="Cooking-eqp.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Electricdeepfryer/IMG-20250813-WA0004.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Electric Deep Fryer</h3>
-            <p>Collection →</p>
+        </div>
+
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
+
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">Ice Creame Machine</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-        <a href="Cooking-eqp.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Gasdeepfryer/IMG-20250813-WA0000.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Gas Deep fryer</h3>
-            <p>Collection →</p>
+        </div>
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
+
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">Ice Creame Machine</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-        <a href="Cooking-eqp.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Gasdeepfryer/IMG-20250813-WA0000.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Griddle Plate Fryer With  Fryer</h3>
-            <p>Collection →</p>
+        </div>
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
+
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">Ice Creame Machine</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-      </div>
+        </div>
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
+
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">Ice Creame Machine</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
+          </div>
+        </div>
+
+      </section>
 
 
-<!-- bakery -->
+      <!-- juiser -->
+      <section
+        class="collection-grid"
+        data-category="juicer"
+        style="display: grid"
+      >
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
 
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
 
-      <div class="collection-grid" data-category="bakery" style="display: none">
-        <a href="baking.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Popcornmachines/20250530_154516.jpg"
-            alt="Microwaves"
-          />
-          <div class="collection-info">
-            <h3>Baking Deck oven</h3>
-            <p>Collection →</p>
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">juicer</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-        <a href="baking.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Planetary Mixer</h3>
-            <p>Collection →</p>
-          </div>
-        </a>
-        <a href="baking.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Pizza Oven</h3>
-            <p>Collection →</p>
-          </div>
-        </a>
-      </div>
+        </div>
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
 
-      <!-- cold product -->
-      <div class="collection-grid" data-category="cold" style="display: none">
-        <a href="Cooking-eqp.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Popcornmachines/20250530_154516.jpg"
-            alt="Microwaves"
-          />
-          <div class="collection-info">
-            <h3>Ice Crusher</h3>
-            <p>Collection →</p>
-          </div>
-        </a>
-        <a href="#" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Ice Creame Machine</h3>
-            <p>Collection →</p>
-          </div>
-        </a>
-        <a href="#" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Flash blender</h3>
-            <p>Collection →</p>
-          </div>
-        </a>
-        <a href="#" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Blender</h3>
-            <p>Collection →</p>
-          </div>
-        </a>
-      </div>
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
 
-      <!-- Buffet & Table -->
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">juicer</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
+          </div>
+        </div>
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
 
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
 
-      <div class="collection-grid" data-category="buffet" style="display: none">
-        <a href="Cooking-eqp.html" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Popcornmachines/20250530_154516.jpg"
-            alt="Microwaves"
-          />
-          <div class="collection-info">
-            <h3>Bain Marie</h3>
-            <p>Collection →</p>
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">juicer</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-        <a href="#" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Ice Creame Machine</h3>
-            <p>Collection →</p>
+        </div>
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
+
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">juicer</div>
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-        <a href="#" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Flash blender</h3>
-            <p>Collection →</p>
+        </div>
+        <div class="product2-card">
+          <img src="images/oven.jpg" alt="Product Image" />
+
+          <span class="product2-badge">New</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+
+          <div class="product2-info">
+            <div class="product2-brand">Dee Kitchen</div>
+            <div class="product2-title">juicer</div>
+           
+            <div class="product2-price">
+              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            </div>
+            <a href="Cooking-eqp.html">
+              <button class="product2-add-cart">Buy now</button>
+            </a>
           </div>
-        </a>
-        <a href="#" class="collection-card">
-          <img
-            src="Product-img/Cookingequip/Cottoncandy/20250530_154945.jpg"
-            alt="Bakery"
-          />
-          <div class="collection-info">
-            <h3>Blender</h3>
-            <p>Collection →</p>
-          </div>
-        </a>
-      </div>
+        </div>
+
+      </section>
+     
     </section>
 
     <footer class="footer">
@@ -851,16 +987,23 @@
       });
 
       const categoryTitles = {
-        cooking: "Cooking Equipements",
-        bakery: "Baking Equipment",
-        cold: "Cold Equipment",
-        buffet: "Buffet & Tableware",
-        beverage: "Bevarage Accesories",
-        bar: "Bar Accesories",
-        housekeeping: "House Keeping",
-        kitchen: "Kitchen Acccessorie",
-        baking: "Baking Accescsories",
-        spares: "Spares",
+        icecream: "Ice Cream Machines",
+        juicer: "Juicer Machines",
+        juicedispensers: "Juice Dispensers",
+        popcorn: "Popcorn Machines",
+        deepfryers: "Deep Fryers",
+        pizzaovens: "Pizza Ovens",
+        waffle: "Waffle Machines",
+        foodwarmer: "Food Warmers",
+        teacoffee: "Tea & Coffee Machines",
+        bakerymachines: "Bakery Machines",
+        bakeryequipments: "Bakery Equipment",
+        foodprocessing: "Commercial Food Processing Machines",
+        fastfood: "Fast Food Kitchen Equipment",
+        hotelsupplies: "Hotel Supplies",
+        accessories: "Accessories",
+        machinespares: "Machine Spares",
+        miscellaneous: "Miscellaneous",
       };
 
       document.querySelectorAll(".sidebar-list a").forEach((link) => {
@@ -880,38 +1023,60 @@
             categoryTitles[cat] || "";
         });
       });
-
-
-
-       
     </script>
 
-
     <script>
-  // Mobile Navbar Toggle
-  document.querySelector('.nav-toggle').addEventListener('click', function () {
-    document.querySelector('.navbar').classList.toggle('open');
-    document.body.style.overflow = document.querySelector('.navbar').classList.contains('open') ? 'hidden' : '';
-  });
+      // Mobile Navbar Toggle
+      document
+        .querySelector(".nav-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".navbar").classList.toggle("open");
+          document.body.style.overflow = document
+            .querySelector(".navbar")
+            .classList.contains("open")
+            ? "hidden"
+            : "";
+        });
 
-  // Close nav when clicking outside
-  document.addEventListener('click', function (e) {
-    const navbar = document.querySelector('.navbar');
-    if (!navbar.classList.contains('open')) return;
-    if (!navbar.contains(e.target) && !e.target.classList.contains('nav-toggle')) {
-      navbar.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
+      // Close nav when clicking outside
+      document.addEventListener("click", function (e) {
+        const navbar = document.querySelector(".navbar");
+        if (!navbar.classList.contains("open")) return;
+        if (
+          !navbar.contains(e.target) &&
+          !e.target.classList.contains("nav-toggle")
+        ) {
+          navbar.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+      });
 
-  // Close nav on ESC
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      document.querySelector('.navbar').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
-</script>
+      // Close nav on ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          document.querySelector(".navbar").classList.remove("open");
+          document.body.style.overflow = "";
+        }
+      });
 
+
+
+      // Scroll to top when sidebar link is clicked
+document.querySelectorAll('.sidebar-list a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('.sidebar-list a').forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+    const cat = this.getAttribute('data-category');
+    document.querySelectorAll('.collection-grid').forEach(grid => {
+      grid.style.display = grid.getAttribute('data-category') === cat ? 'grid' : 'none';
+    });
+    // Update grid title
+    document.getElementById('gridTitle').textContent = categoryTitles[cat] || '';
+    // Scroll to top of sidebar (or section)
+    document.querySelector('.popcorn-machine-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+    </script>
   </body>
 </html>
