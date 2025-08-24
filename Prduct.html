@@ -184,7 +184,7 @@
       background: #fff8f0;
       color: #4a4a4a;
       border-radius: 15px;
-      height: 425px;
+      height: 465px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
       font-family: "Poppins", sans-serif;
@@ -519,64 +519,63 @@
     }
     /* ...existing code... */
 
-/* Make sidebar fixed on desktop */
-@media (min-width: 901px) {
-  .side-bar {
-    position: fixed;
-    top: 100px; /* adjust as needed for your navbar height */
-    left: 40px; /* adjust for your layout */
-    max-height: 80vh;
-    overflow-y: auto;
-    z-index: 20;
-  }
-  .popcorn-machine-section {
-    margin-left: 300px; /* adjust to match sidebar width + left offset */
-  }
-}
+    /* Make sidebar fixed on desktop */
+    @media (min-width: 901px) {
+      .side-bar {
+        position: fixed;
+        top: 100px; /* adjust as needed for your navbar height */
+        left: 40px; /* adjust for your layout */
+        max-height: 80vh;
+        overflow-y: auto;
+        z-index: 20;
+      }
+      .popcorn-machine-section {
+        margin-left: 300px; /* adjust to match sidebar width + left offset */
+      }
+    }
 
+    /* ...existing code... */
 
-/* ...existing code... */
+    /* Make sure sidebar does not block footer or shop-collection */
+    @media (min-width: 901px) {
+      .side-bar {
+        position: fixed;
+        top: 100px;
+        left: 40px;
+        max-height: 80vh;
+        overflow-y: auto;
+        z-index: 20;
+      }
+      .popcorn-machine-section,
+      .shop-collection {
+        margin-left: 300px; /* match sidebar width + left offset */
+      }
+      .footer {
+        margin-left: 0; /* footer stays full width */
+        clear: both;
+        position: relative;
+        z-index: 10;
+      }
+    }
 
-/* Make sure sidebar does not block footer or shop-collection */
-@media (min-width: 901px) {
-  .side-bar {
-    position: fixed;
-    top: 100px;
-    left: 40px;
-    max-height: 80vh;
-    overflow-y: auto;
-    z-index: 20;
-  }
-  .popcorn-machine-section,
-  .shop-collection {
-    margin-left: 300px; /* match sidebar width + left offset */
-  }
-  .footer {
-    margin-left: 0; /* footer stays full width */
-    clear: both;
-    position: relative;
-    z-index: 10;
-  }
-}
+    /* On mobile, sidebar is not fixed and does not affect layout */
+    @media (max-width: 900px) {
+      .side-bar,
+      .popcorn-machine-section,
+      .shop-collection {
+        margin-left: 0;
+        position: static;
+        max-width: 100%;
+      }
+      .footer {
+        margin-left: 0;
+        position: relative;
+        z-index: 10;
+      }
+    }
 
-/* On mobile, sidebar is not fixed and does not affect layout */
-@media (max-width: 900px) {
-  .side-bar,
-  .popcorn-machine-section,
-  .shop-collection {
-    margin-left: 0;
-    position: static;
-    max-width: 100%;
-  }
-  .footer {
-    margin-left: 0;
-    position: relative;
-    z-index: 10;
-  }
-}
-
-/* ...existing code... */
-/* ...existing code... */
+    /* ...existing code... */
+    /* ...existing code... */
 
     /* ...existing code... */
     /* ...existing code... */
@@ -689,7 +688,10 @@
         style="display: grid"
       >
         <div class="product2-card">
-          <img src="Product-img/Bakingequip/bakingdeckoven/Bakero Electric Baking Oven 1 Deck 2 Tray (1).jpg" alt="Product Image" />
+          <img
+            src="ice creame machine/Heavy Duty Softy Ice Cream Machine.jpg"
+            alt="Product Image"
+          />
 
           <span class="product2-badge">New</span>
           <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
@@ -697,104 +699,161 @@
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
             <div class="product2-title">Ice Creame Machine</div>
-            <div class="product2-title">Volt:120w,capacity:30L,300Cone/hour</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">
+              Volt: 120W &nbsp; | &nbsp; Capacity: 30L &nbsp; | &nbsp; Output:
+              300 Cones/hour &nbsp; | &nbsp; Weight: 45kg &nbsp; | &nbsp;
+              Material: Stainless Steel
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+
+            <div class="product2-price">
+              ₹114,999 <span class="product2-old-price">₹118,999</span>
+            </div>
+            <a href="icecreame.html">
+              <button class="product2-add-cart">view</button>
             </a>
           </div>
         </div>
+
+        <!-- Product 1 -->
         <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
+          <img
+            src="ice creame machine/50Hz Softy Ice Cream Machines (1).jpg"
+            alt="Ice Cream Machine"
+          />
 
           <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.7</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">Ice Creame Machine</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">Soft Serve Ice Cream Machine</div>
+            <div class="product2-title">
+              Volt: 220W &nbsp; | &nbsp; Capacity: 40L &nbsp; | &nbsp; Output:
+              350 Cones/hour &nbsp; | &nbsp; Cooling: Air Cooled &nbsp; | &nbsp;
+              Weight: 50kg
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+
+            <div class="product2-price">
+              ₹42,999 <span class="product2-old-price">₹49,999</span>
+            </div>
+            <a href="icecreame.html">
+              <button class="product2-add-cart">View</button>
             </a>
           </div>
         </div>
 
+        <!-- Product 3 -->
         <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
+          <img
+            src="ice creame machine/2100W Softy Ice Cream Machines.jpg"
+            alt="Gelato Machine"
+          />
 
-          <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+          <span class="product2-badge">Hot</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.6</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">Ice Creame Machine</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">Gelato Ice Cream Machine</div>
+            <div class="product2-title">
+              Volt: 220V &nbsp; | &nbsp; Capacity: 35L &nbsp; | &nbsp; Output:
+              300 Cones/hour &nbsp; | &nbsp; Cooling: Air Cooled &nbsp; | &nbsp;
+              Weight: 48kg
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+
+            <div class="product2-price">
+              ₹55,999 <span class="product2-old-price">₹64,999</span>
+            </div>
+            <a href="icecreame.html">
+              <button class="product2-add-cart">View</button>
             </a>
           </div>
         </div>
+
+        <!-- Product 4 -->
         <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
+          <img
+            src="ice creame machine/2100W Softy Ice Cream Machines (2).jpg"
+            alt="Rolled Ice Cream Maker"
+          />
 
-          <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+          <span class="product2-badge">Limited</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.4</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">Ice Creame Machine</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">Rolled Ice Cream Machine</div>
+            <div class="product2-title">
+              Volt: 240V &nbsp; | &nbsp; Capacity: 45L &nbsp; | &nbsp; Output:
+              400 Cones/hour &nbsp; | &nbsp; Cooling: Water Cooled &nbsp; |
+              &nbsp; Weight: 55kg
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+
+            <div class="product2-price">
+              ₹47,499 <span class="product2-old-price">₹53,999</span>
+            </div>
+            <a href="Juicer.html">
+              <button class="product2-add-cart">View</button>
             </a>
           </div>
         </div>
+
+        <!-- Product 5 -->
         <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
+          <img
+            src="ice creame machine/2100W Softy Ice Cream Machines (3).jpg"
+            alt="Commercial Ice Cream Maker"
+          />
 
-          <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+          <span class="product2-badge">Pro</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.9</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">Ice Creame Machine</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">Commercial Ice Cream Machine</div>
+            <div class="product2-title">
+              Volt: 220V &nbsp; | &nbsp; Capacity: 50L &nbsp; | &nbsp; Output:
+              500 Cones/hour &nbsp; | &nbsp; Cooling: Air + Water Cooled &nbsp;
+              | &nbsp; Weight: 60kg
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+
+            <div class="product2-price">
+              ₹89,999 <span class="product2-old-price">₹99,999</span>
+            </div>
+            <a href="Juicer.html">
+              <button class="product2-add-cart">View</button>
             </a>
           </div>
         </div>
+
+        <!-- Product 6 -->
         <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
+          <img
+            src="ice creame machine/2100W Softy Ice Cream Machines (1).jpg"
+            alt="Compact Ice Cream Maker"
+          />
 
-          <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+          <span class="product2-badge">Budget</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.3</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">Ice Creame Machine</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">Compact Countertop Ice Cream Maker</div>
+            <div class="product2-title">
+              Volt: 210V &nbsp; | &nbsp; Capacity: 38L &nbsp; | &nbsp; Output:
+              320 Cones/hour &nbsp; | &nbsp; Cooling: Air Cooled &nbsp; | &nbsp;
+              Weight: 47kg
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+
+            <div class="product2-price">
+              ₹19,499 <span class="product2-old-price">₹25,999</span>
+            </div>
+            <a href="icecreame.html">
+              <button class="product2-add-cart">View</button>
             </a>
           </div>
         </div>
-
       </section>
-
 
       <!-- juiser -->
       <section
@@ -802,95 +861,98 @@
         data-category="juicer"
         style="display: grid"
       >
+        <!-- Juicer Machine Card 1 -->
         <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
-
+          <img src="images/juicer1.jpg" alt="Juicer Machine" />
           <span class="product2-badge">New</span>
           <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">juicer</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">Commercial Juicer – Basic</div>
+            <div class="product2-title">
+              Volt: 220V &nbsp; | &nbsp; Power: 500W &nbsp; | &nbsp; Capacity:
+              8L/hour &nbsp; | &nbsp; Speed: 2500 RPM &nbsp; | &nbsp; Weight:
+              22kg
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+            <div class="product2-price">
+              ₹9,999 <span class="product2-old-price">₹12,499</span>
+            </div>
+            <a href="Juicer.html">
+              <button class="product2-add-cart">Buy Now</button>
             </a>
           </div>
         </div>
-        <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
 
-          <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+        <!-- Juicer Machine Card 2 -->
+        <div class="product2-card">
+          <img src="images/juicer2.jpg" alt="Juicer Machine" />
+          <span class="product2-badge">Hot</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.7</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">juicer</div>
+            <div class="product2-title">Heavy Duty Juicer</div>
+            <div class="product2-title">
+              Volt: 220V &nbsp; | &nbsp; Power: 750W &nbsp; | &nbsp; Capacity:
+              10L/hour &nbsp; | &nbsp; Speed: 2800 RPM &nbsp; | &nbsp; Weight:
+              25kg
+            </div>
             <div class="product2-price">
               ₹14,999 <span class="product2-old-price">₹18,999</span>
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+            <a href="juicer-heavy.html">
+              <button class="product2-add-cart">Buy Now</button>
             </a>
           </div>
         </div>
-        <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
 
-          <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+        <!-- Juicer Machine Card 3 -->
+        <div class="product2-card">
+          <img src="images/juicer3.jpg" alt="Juicer Machine" />
+          <span class="product2-badge">Best Seller</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 4.8</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">juicer</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">Professional Juicer XL</div>
+            <div class="product2-title">
+              Volt: 230V &nbsp; | &nbsp; Power: 1.2kW &nbsp; | &nbsp; Capacity:
+              15L/hour &nbsp; | &nbsp; Speed: 3000 RPM &nbsp; | &nbsp; Weight:
+              28kg
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+            <div class="product2-price">
+              ₹19,499 <span class="product2-old-price">₹23,999</span>
+            </div>
+            <a href="juicer-xl.html">
+              <button class="product2-add-cart">Buy Now</button>
             </a>
           </div>
         </div>
-        <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
 
-          <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
+        <!-- Juicer Machine Card 4 -->
+        <div class="product2-card">
+          <img src="images/juicer4.jpg" alt="Juicer Machine" />
+          <span class="product2-badge">Premium</span>
+          <span class="product2-rating"><i class="fa fa-star"></i> 5.0</span>
 
           <div class="product2-info">
             <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">juicer</div>
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
+            <div class="product2-title">Industrial Juicer Pro</div>
+            <div class="product2-title">
+              Volt: 240V &nbsp; | &nbsp; Power: 1.5kW &nbsp; | &nbsp; Capacity:
+              20L/hour &nbsp; | &nbsp; Speed: 3200 RPM &nbsp; | &nbsp; Weight:
+              30kg
             </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
+            <div class="product2-price">
+              ₹24,999 <span class="product2-old-price">₹29,999</span>
+            </div>
+            <a href="juicer-pro.html">
+              <button class="product2-add-cart">Buy Now</button>
             </a>
           </div>
         </div>
-        <div class="product2-card">
-          <img src="images/oven.jpg" alt="Product Image" />
-
-          <span class="product2-badge">New</span>
-          <span class="product2-rating"><i class="fa fa-star"></i> 4.5</span>
-
-          <div class="product2-info">
-            <div class="product2-brand">Dee Kitchen</div>
-            <div class="product2-title">juicer</div>
-           
-            <div class="product2-price">
-              ₹14,999 <span class="product2-old-price">₹18,999</span>
-            </div>
-            <a href="Cooking-eqp.html">
-              <button class="product2-add-cart">Buy now</button>
-            </a>
-          </div>
-        </div>
-
       </section>
-     
     </section>
 
     <footer class="footer">
@@ -1059,24 +1121,32 @@
         }
       });
 
-
-
       // Scroll to top when sidebar link is clicked
-document.querySelectorAll('.sidebar-list a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelectorAll('.sidebar-list a').forEach(l => l.classList.remove('active'));
-    this.classList.add('active');
-    const cat = this.getAttribute('data-category');
-    document.querySelectorAll('.collection-grid').forEach(grid => {
-      grid.style.display = grid.getAttribute('data-category') === cat ? 'grid' : 'none';
-    });
-    // Update grid title
-    document.getElementById('gridTitle').textContent = categoryTitles[cat] || '';
-    // Scroll to top of sidebar (or section)
-    document.querySelector('.popcorn-machine-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
+      document.querySelectorAll(".sidebar-list a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .querySelectorAll(".sidebar-list a")
+            .forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+          const cat = this.getAttribute("data-category");
+          document.querySelectorAll(".collection-grid").forEach((grid) => {
+            grid.style.display =
+              grid.getAttribute("data-category") === cat ? "grid" : "none";
+          });
+          // Update grid title
+          document.getElementById("gridTitle").textContent =
+            categoryTitles[cat] || "";
+          // Scroll to top of sidebar (or section)
+          document
+            .querySelector(".popcorn-machine-section")
+            .scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
     </script>
-  </body>
+
+
+
+
+</body>
 </html>

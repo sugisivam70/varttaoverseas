@@ -1,7 +1,7 @@
-    body {
-font-family:'poppins' sans-serif;
-       
-      }
+body {
+  font-family: "poppins" sans-serif;
+  background: fixed;
+}
 h1 {
   font-weight: 700;
   font-size: 2.5rem;
@@ -12,7 +12,6 @@ p {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
 
 .navbar {
   font-family: "Poppins", sans-serif;
@@ -28,6 +27,21 @@ p {
   z-index: 10;
 }
 
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translatex(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+.navbar  {
+  animation: fadeUp 1.2s cubic-bezier(0.6,0.2,0.2,1) 0.2s both;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -39,7 +53,7 @@ p {
 
   margin-right: 10px;
 }
- 
+
 .brand-text {
   font-size: 18px;
   font-weight: bold;
@@ -96,7 +110,6 @@ nav ul li {
 .hero {
   position: relative;
 
-
   height: 80vh;
   background-position: center;
   display: flex;
@@ -106,11 +119,7 @@ nav ul li {
   text-align: center;
   margin: 2rem;
   border-radius: 20px;
-
-
-  
 }
-
 
 .hero-content {
   max-width: 700px;
@@ -125,15 +134,27 @@ nav ul li {
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
-.bgimg img{
+.bgimg img {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  position:absolute;
-
- 
+  position: absolute;
+}
+/* Add to your style.css */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+.hero-content h1  {
+  animation: fadeUp 1.2s cubic-bezier(0.6,0.2,0.2,1) 0.2s both;
+}
 .hero-content h1 {
   color: #571b00;
   font-size: 4.5rem;
@@ -149,8 +170,23 @@ nav ul li {
 
   text-align: center;
   justify-content: center;
+  transform: translateX();
 }
 
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content p  {
+  animation: fadeUp 1.2s cubic-bezier(0.6,0.2,0.2,1) 0.2s both;
+}
 .hero-content p {
   color: #4a4a4a;
 
@@ -186,14 +222,8 @@ nav ul li {
   border: none;
 
   transform: translateY(-2px);
-  cursor: pointer;  
-
-  
-
-
-
+  cursor: pointer;
 }
-
 
 .scroll-down-btn {
   display: inline-block;
@@ -211,12 +241,16 @@ nav ul li {
   transition: 0.3s;
   background: rgba(255, 166, 0, 0.1);
   color: #4a4a4a;
-
 }
 
 @keyframes bounce {
-  0%, 100% { transform: rotate(-45deg) translateX(0); }
-  50% { transform: rotate(45deg) translateY(10px); }
+  0%,
+  100% {
+    transform: rotate(-45deg) translateX(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(10px);
+  }
 }
 .scroll-down-btn span {
   display: inline-block;
@@ -244,7 +278,6 @@ nav ul li {
     justify-content: space-between;
   }
 }
-
 
 .navbar {
   display: flex;
@@ -374,17 +407,17 @@ nav ul li a {
 }
 
 .collection-slider {
-   background: rgba(250, 236, 223, 0.9);
-   border-radius: 20px;
-padding: 4rem;
+  background: rgba(250, 236, 223, 0.9);
+  border-radius: 20px;
+  padding: 4rem;
   margin: 2rem;
   overflow: hidden;
   position: relative;
   font-family: "Poppins", sans-serif;
 }
 
-.hotselling{
-   background: rgba(250, 236, 223, 1);
+.hotselling {
+  background: rgba(250, 236, 223, 1);
   border-radius: 10px;
 }
 .scroll-wrapper {
@@ -460,7 +493,7 @@ padding: 4rem;
 .product-section {
   font-family: "Poppins", sans-serif;
   padding: 0.5rem 2rem 2rem 2rem;
- background: rgba(250, 236, 223, 0.8);
+  background: rgba(250, 236, 223, 0.8);
   max-width: 1400px;
   margin: auto;
   border-radius: 20px;
@@ -543,7 +576,7 @@ padding: 4rem;
 
 .product2-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin: 2rem;
   font-family: "Poppins", sans-serif;
@@ -557,7 +590,6 @@ padding: 4rem;
   height: 400px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
- 
 }
 
 .product2-card:hover {
@@ -569,7 +601,6 @@ padding: 4rem;
   max-height: 210px;
   border-bottom: 1px solid #f0f0f0;
   object-fit: contain;
-
 }
 
 .product2-badge {
@@ -654,11 +685,10 @@ padding: 4rem;
 
 @media (max-width: 600px) {
   .product2-grid {
-    grid-template-columns: repeat(auto-fit, minmax( 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
     grid-template-columns: 1fr 1fr;
     gap: 12px;
   }
-
 }
 
 .hote-title {
@@ -700,7 +730,7 @@ padding: 4rem;
 }
 
 .shop-collection {
-   background: rgba(250, 236, 223, 0.8);
+  background: rgba(250, 236, 223, 0.8);
   margin: 0;
   max-width: 1200px;
   padding: 0;
@@ -715,7 +745,6 @@ padding: 4rem;
 }
 
 .collection-grid {
-  
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -747,7 +776,6 @@ padding: 4rem;
 .collection-card img {
   width: 100%;
   object-fit: contain;
-
 }
 
 .collection-info h3 {
@@ -774,9 +802,9 @@ padding: 4rem;
 }
 
 .carousel-section {
-   background: rgba(250, 236, 223, 0.8);
-  
-font-family: "Poppins", sans-serif;
+  background: rgba(250, 236, 223, 0.8);
+
+  font-family: "Poppins", sans-serif;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -904,21 +932,19 @@ font-family: "Poppins", sans-serif;
 .tab.active {
   background: #f67700;
   color: #fff;
-
 }
-.hotselling{
+.hotselling {
   padding: 4rem;
   padding-top: 10px;
-  font-family: 'poppins', sans-serif;
+  font-family: "poppins", sans-serif;
 }
-
 
 /* ...existing code... */
 .tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-
+  margin-bottom: 0;
   flex-direction: row;
   align-items: flex-start;
   /* Remove column direction for default */
@@ -958,9 +984,8 @@ font-family: "Poppins", sans-serif;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   margin-bottom: 40px;
-   background: rgba(250, 236, 223, 0.8);
-   padding: 3rem;
-  
+  background: rgba(250, 236, 223, 0.8);
+  padding: 3rem;
 }
 
 .product-card {
@@ -1163,7 +1188,7 @@ font-family: "Poppins", sans-serif;
 .shop-collection {
   margin-top: 1rem;
   padding: 40px;
-   background: rgba(250, 236, 223, 0.8);
+  background: rgba(250, 236, 223, 0.8);
 
   justify-content: center;
   align-items: center;
@@ -1249,6 +1274,9 @@ font-family: "Poppins", sans-serif;
   font-size: 20px;
   cursor: pointer;
 }
+.carousel-btn.left {
+  margin-right: 10px;
+}
 
 @media (max-width: 768px) {
   .collections-header h2 {
@@ -1271,7 +1299,7 @@ font-family: "Poppins", sans-serif;
 }
 
 .testimonial-section {
-   background: rgba(250, 236, 223, 0.8);
+  background: rgba(250, 236, 223, 0.8);
 
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1444,7 +1472,7 @@ font-family: "Poppins", sans-serif;
 
 /* Right side big slider */
 .slider {
-   background: rgba(250, 236, 223, 0.8);
+  background: rgba(250, 236, 223, 0.8);
 
   color: white;
   border-radius: 20px;
@@ -1535,8 +1563,7 @@ font-family: "Poppins", sans-serif;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-       font-family: "Poppins", sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .footer-brand {
@@ -1692,7 +1719,6 @@ font-family: "Poppins", sans-serif;
 
 /* ...existing code... */
 
-
 /* Responsive Hero Section */
 .hero {
   position: relative;
@@ -1706,7 +1732,6 @@ font-family: "Poppins", sans-serif;
   text-align: center;
   margin: 2rem;
   border-radius: 20px;
-
 
   padding: 0 20px;
 }
@@ -1731,17 +1756,15 @@ font-family: "Poppins", sans-serif;
   left: 0;
   z-index: 0;
   border-radius: 20px;
-
 }
 .hero-content {
-  
   max-width: 1000px;
   width: 100%;
   padding: 0 20px;
   color: #282828;
   justify-content: center;
   text-align: center;
-  background:none;
+  background: none;
   border-radius: 20px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -1817,7 +1840,7 @@ font-family: "Poppins", sans-serif;
     padding: 5px 5px;
     font-size: 11px;
   }
-  .scroll-down-btn{
+  .scroll-down-btn {
     font-size: 10px;
   }
 }
@@ -1846,7 +1869,7 @@ font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 600px) {
-  .hotselling{
+  .hotselling {
     padding: 0;
   }
   .product-section {
