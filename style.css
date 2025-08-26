@@ -927,6 +927,7 @@ nav ul li a {
   padding: 8px;
   cursor: pointer;
   border-radius: 20px;
+ 
 }
 
 .tab.active {
@@ -980,6 +981,7 @@ nav ul li a {
 }
 /* ...existing code... */
 .product-carousel {
+  margin-top:1rem ;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
