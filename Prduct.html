@@ -1178,9 +1178,80 @@
             .scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
+
+
+
+      
     </script>
+<div
+  id="imgModal"
+  style="
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+  "
+>
+  <span
+    id="imgModalClose"
+    style="
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+      z-index: 10001;
+    "
+    >&times;</span
+  >
+  <img
+    id="imgModalImg"
+    src=""
+    alt="Full View"
+    style="
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    "
+  />
+</div>
 
 
+<script>
+  // Show image in fullscreen modal
+function showImageModal(src) {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("imgModalImg");
+  modalImg.src = src;
+  modal.style.display = "flex";
+}
+
+// Close modal on close button
+document.getElementById("imgModalClose").onclick = function () {
+  document.getElementById("imgModal").style.display = "none";
+};
+
+// Also close modal when clicking outside the image
+document.getElementById("imgModal").onclick = function (e) {
+  if (e.target === this) this.style.display = "none";
+};
+
+// Attach click event to all product images for fullscreen
+document.querySelectorAll('.product2-card img').forEach(img => {
+  img.style.cursor = "zoom-in";
+  img.onclick = function() {
+    showImageModal(this.src);
+  };
+});
+</script>
 
 
 </body>
