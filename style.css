@@ -795,7 +795,7 @@ nav ul li a {
   color: #555;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 368px) {
   .collection-grid {
     grid-template-columns: 1fr 1fr;
   }
